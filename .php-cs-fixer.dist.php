@@ -12,6 +12,10 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__ . '/tests/Support/_generated',
         __DIR__ . '/src/Processor/Api/PDFreactor.class.php',
     ])
+
+    ->notPath([
+        'Processor/Api/PDFreactor.class.php'
+    ])
 ;
 
 // do not enable self_accessor as it breaks pimcore models relying on get_called_class()

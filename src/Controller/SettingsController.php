@@ -95,10 +95,14 @@ class SettingsController extends UserAwareController
 
         if ($adapter instanceof PdfReactor) {
             $params['adapterConfig'] = [
-                'javaScriptMode' => 0,
+                'javaScriptSettings' => [
+                    'enabled' => false,
+                ],
                 'addLinks' => true,
                 'appendLog' => true,
-                'enableDebugMode' => true,
+                'debugSettings' => [
+                    'all' => true,
+                ],
             ];
         } elseif ($adapter instanceof Gotenberg) {
             $params = Config::getWeb2PrintConfig();
