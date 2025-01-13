@@ -128,7 +128,7 @@ class Gotenberg extends Processor
 
         $options = [
             'printBackground', 'landscape', 'preferCssPageSize', 'omitBackground', 'emulatePrintMediaType',
-            'emulateScreenMediaType',
+            'emulateScreenMediaType', 'generateDocumentOutline',
         ];
 
         foreach ($options as $option) {
